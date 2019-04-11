@@ -1,0 +1,36 @@
+<section class="row">
+  <div class="column">
+    <h2>Blink</h2>
+    <div>
+    <%= Enum.map(0..map_size(@grid)-1, fn i -> %>
+        <div>
+          <%= Enum.map(0..map_size(@grid[i])-1, fn j -> %>
+              <span>
+                <%= case (@grid[i][j]) do
+                  0 -> "*"
+                  1 -> "#"
+                end %>
+              </span>
+          <% end) %>
+        </div>
+        <% end) %>
+   </div>
+  </div>
+  <div class="column">
+    <h2>Blink</h2>
+    <div>
+    <%= Enum.map(0..map_size(@grid)-1, fn i -> %>
+        <div>
+          <%= Enum.map(0..map_size(@grid[i])-1, fn j -> %>
+              <span>
+                <%= case (@grid[i][j]) do
+                  0 -> "*"
+                  1 -> "#"
+                end %>
+              </span>
+          <% end) %>
+        </div>
+        <% end) %>
+   </div>
+  </div>
+</section>
