@@ -6,18 +6,18 @@ defmodule GameWeb.GameView.Index do
     ~L"""
     <section class="row row-top row-wrap">
     <%= Enum.map(@grids, fn {title, value} -> %>
-      <div class="column column-center column-offset-10 column-33 custom-margin">
+      <div class="column column-center column-offset-10 column-40 custom-margin">
         <h2><%= String.capitalize(String.replace(Atom.to_string(title), "_", " ")) %></h2>
         <div>
           <%= Enum.map(0..map_size(value)-1, fn i -> %>
             <div class="row">
               <%= Enum.map(0..map_size(value[i])-1, fn j -> %>
-                  <span class="column cell <%= case (value[i][j]) do
+                  <div class="column cell <%= case (value[i][j]) do
                     0 -> 'cell-#{title}-dark'
                     1 -> 'cell-#{title}'
                   end %> ">
 
-                  </span>
+                  </div>
               <% end) %>
             </div>
           <% end) %>

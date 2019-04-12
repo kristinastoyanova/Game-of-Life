@@ -249,7 +249,7 @@ input[type='radio'] {
 }
 .row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 0;
   width: 100%;
 }
@@ -672,43 +672,31 @@ header nav a {
 }
 
 .cell-blinker {
-  height: 50px;
-  width: 50px;
   background-color: #d9edf7;
   border-color: #d9edf7;
 }
 
 .cell-blinker-dark {
-  height: 50px;
-  width: 50px;
   background-color: #31708f;
   border-color: #d9edf7;
 }
 
 .cell-beacon {
-  height: 35px;
-  width: 35px;
   background-color: #d1c2b1;
   border-color: #d1c2b1;
 }
 
 .cell-beacon-dark {
-  height: 35px;
-  width: 35px;
   background-color: #8e7457;
   border-color: #d1c2b1;
 }
 
 .cell-pulsar {
-  height: 23px;
-  width: 23px;
   background-color: #ebccd1;
   border-color: #ebccd1;
 }
 
 .cell-pulsar-dark {
-  height: 23px;
-  width: 23px;
   background-color: #a94442;
   border-color: #ebccd1;
 }
@@ -724,19 +712,57 @@ header nav a {
 }
 
 .cell-toad {
-  height: 35px;
-  width: 35px;
   background-color: #d5fafa;
   border-color: #fcdebd;
 }
 
 .cell-toad-dark {
-  height: 35px;
-  width: 35px;
   background-color: #047d8c;
   border-color: #d5fafa;
 }
 
 .custom-margin {
   margin-top: 3rem;
+}
+
+@media (min-width: 40rem) {
+  .cell-blinker {
+    height: 52px;
+    width: 52px;
+  }
+
+  .cell-blinker-dark {
+    height: 52px;
+    width: 52px;
+  }
+
+  .cell-beacon {
+    height: 42px;
+    width: 42px;
+  }
+
+  .cell-beacon-dark {
+    height: 42px;
+    width: 42px;
+  }
+
+  .cell-pulsar {
+    height: 23px;
+    width: 23px;
+  }
+
+  .cell-pulsar-dark {
+    height: 23px;
+    width: 23px;
+  }
+
+  .cell-toad {
+    height: 42px;
+    width: 42px;
+  }
+
+  .cell-toad-dark {
+    height: 42px;
+    width: 42px;
+  }
 }
