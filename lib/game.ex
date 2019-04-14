@@ -26,10 +26,8 @@ defmodule Game do
   end
 
   @spec live_or_die(Integer.t(), Integer.t()) :: Integer.t()
-  # 2 live neightbours + the currenct cell
-  defp live_or_die(3, 1), do: 1
-  # 3 live neightbours + the currenct cell
-  defp live_or_die(4, 1), do: 1
+  # 2 or 3 live neighbours + the current live cell
+  defp live_or_die(count, 1) when count in [3, 4], do: 1
   defp live_or_die(3, 0), do: 1
   defp live_or_die(_, _), do: 0
 
